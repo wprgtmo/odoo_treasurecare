@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- actions opening views on models -->
+    <record id="zonitell.action_callers_window" model="ir.actions.act_window">
+        <field name="name">zonitell callers window</field>
+        <field name="res_model">zonitell.callers</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- View zonitell_callers View Tree -->
+    <record id="view_zonitell_callers_tree" model="ir.ui.view">
+        <field name="name">view.zonitell_callers.tree</field>
+        <field name="model">zonitell.callers</field>
+        <field name="arch" type="xml">
+            <tree string="Zonitell_callers">
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="full_name"/>
+                <field name="phone_number"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View zonitell_callers form -->
+    <record id="view_zonitell_callers_form" model="ir.ui.view">
+        <field name="name">view.zonitell_callers.form</field>
+        <field name="model">zonitell.callers</field>
+        <field name="arch" type="xml">
+            <form string="Zonitell_callers">
+                <sheet>
+                    <group>
+                        <field name="first_name" placeholder="Fist name..."/>
+                        <field name="last_name" placeholder="Last name..."/>
+                        <field name="full_name" placeholder="Full name..."/>
+                        <field name="phone_number" placeholder="Phone number..."/>
+                    </group>
+                    <group>
+                        <field name="calls" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View zonitell_callers search -->
+    <record id="view_zonitell_callers_search" model="ir.ui.view">
+        <field name="name">view.zonitell_callers.search</field>
+        <field name="model">zonitell.callers</field>
+        <field name="arch" type="xml">
+            <search string="Zonitell_callers">
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="first_name" domain="[]" context="{'group_by':'first_name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action zonitell_callers -->
+    <record id="action_zonitell_callers" model="ir.actions.act_window">
+        <field name="name">Zonitell_callers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">zonitell.callers</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Zonitell_callers.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,8 @@
+{
+    "stubPath": "D:/dev/odoo_stubs17" ,
+    "extraPaths": [
+        "D:/dev/odoo17_src",
+        "D:/dev/odoo17_src/addons",
+        "D:/dev/treasurecare/mis_addons",
+    ]
+}
