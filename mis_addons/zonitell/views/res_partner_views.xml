@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <!-- actions opening views on models -->
+
+
+    <record model="ir.actions.act_window" id="zonitell.action_contacts_window">
+        <field name="name">Contactos con llamadas</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+  
+
+
+</odoo>

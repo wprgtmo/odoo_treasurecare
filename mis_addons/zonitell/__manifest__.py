@@ -20,7 +20,8 @@ Calls register of Zonitell App used in TreaseureCare
         "security/ir.model.access.csv",
         "views/zonitell_calls_views.xml",
         "views/zonitell_callers_views.xml",
-        "views/menu_views.xml",
+        "views/res_partner_views.xml",
+        "views/menu_views.xml"
     ],
     # only loaded in demonstration mode
     "demo": [

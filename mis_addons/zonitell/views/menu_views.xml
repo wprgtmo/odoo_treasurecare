@@ -9,6 +9,7 @@
         <!-- actions -->
         <menuitem name="Calls" id="zonitell.menu_calls_list" action="zonitell.action_calls_window"/>
         <menuitem name="Callers" id="zonitell.menu_callers_list" action="zonitell.action_callers_window"/>
+        <menuitem name="Contactos" id="zonitell.menu_contacts_list" action="zonitell.action_contacts_window"/>
       </menuitem>
     </menuitem>
   </data>
