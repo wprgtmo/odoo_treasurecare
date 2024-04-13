@@ -18,9 +18,9 @@ Calls register of Zonitell App used in TreaseureCare
     # always loaded
     "data": [
         "security/ir.model.access.csv",
-        "views/views.xml",
         "views/zonitell_calls_views.xml",
         "views/zonitell_callers_views.xml",
+        "views/menu_views.xml",
     ],
     # only loaded in demonstration mode
     "demo": [
