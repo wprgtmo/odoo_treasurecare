@@ -23,7 +23,7 @@
     <!-- actions opening views on models -->
 
 
-    <record model="ir.actions.act_window" id="zonitell.action_contact_window">
+    <record model="ir.actions.act_window" id="action_zonitell_contact">
         <field name="name">Contactos con llamadas</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form</field>
@@ -33,14 +33,14 @@
         <field name="sequence" eval="1"></field>
         <field name="view_mode">tree</field>
         <field name="view_id" ref="base.view_partner_tree"></field>
-        <field name="act_window_id" ref="zonitell.action_contact_window"></field>
+        <field name="act_window_id" ref="action_zonitell_contact"></field>
     </record>
 
     <record model="ir.actions.act_window.view" id="zonitell.action_view_contact_form">
         <field name="sequence" eval="2"></field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="view_zonitell_contactos_form"></field>
-        <field name="act_window_id" ref="zonitell.action_contact_window"></field>
+        <field name="act_window_id" ref="action_zonitell_contact"></field>
     </record>
 
 </odoo>

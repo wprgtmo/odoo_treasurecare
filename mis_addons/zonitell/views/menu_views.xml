@@ -1,15 +1,15 @@
 <odoo>
   <data>
     <!-- Top menu item -->
-    <menuitem name="ZonitellCalls" id="zonitell.menu_root">
+    <menuitem name="Zonitell" id="zonitell.menu_root">
 
       <!-- menu categories -->
       <menuitem name="Zonitell" id="zonitell.menu">
 
         <!-- actions -->
-        <menuitem name="Calls" id="zonitell.menu_call_list" action="zonitell.action_call_window"/>
-        <menuitem name="Contactos" id="zonitell.menu_contact_list" action="zonitell.action_contact_window"/>
-        <!-- <menuitem name="Relacion" id="zonitell.menu_contacts_call_list" action="zonitell.action_contact_call_window"/> -->
+        <menuitem name="Calls" id="zonitell.menu_call_list" action="action_zonitell_call"/>
+        <menuitem name="Contactos" id="zonitell.menu_contact_list" action="action_zonitell_contact"/>
+        <menuitem name="Relacion" id="zonitell.menu_contact_call_list" action="action_zonitell_call_contact"/>
       </menuitem>
     </menuitem>
   </data>

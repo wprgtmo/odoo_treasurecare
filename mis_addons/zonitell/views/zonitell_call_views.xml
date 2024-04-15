@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- actions opening views on models -->
 
-    <record model="ir.actions.act_window" id="zonitell.action_call_window">
-        <field name="name">zonitell call window</field>
+    <!-- Action zonitell.calls -->
+    <record id="action_zonitell_call" model="ir.actions.act_window">
+        <field name="name">Zonitell Call</field>
         <field name="res_model">zonitell.call</field>
         <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Zonitell Call Contact.
+            </p>
+        </field>
     </record>
 
     <!-- View zonitell.calls View Tree -->
@@ -14,6 +19,7 @@
         <field name="model">zonitell.call</field>
         <field name="arch" type="xml">
             <tree string="Calls">
+                <field name="name"/>
                 <field name="direction"/>
                 <field name="status"/>
                 <field name="extension"/>
@@ -37,6 +43,7 @@
         <field name="arch" type="xml">
             <form string="Calls">
                 <group>
+                    <field name="name"/>
                     <field name="direction"/>
                     <field name="status"/>
                     <field name="extension"/>
@@ -61,36 +68,11 @@
         <field name="arch" type="xml">
             <search string="Zonitell Calls">
                 <group expand="1" string="Group By">
-                    <filter string="Name" name="caller_id_name" domain="[]" context="{'group_by':'caller_id_name'}"/>
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
                 </group>
             </search>
         </field>
     </record>
 
-    <!-- Action zonitell.calls -->
-    <record id="action_zonitell_call" model="ir.actions.act_window">
-        <field name="name">Zonitell Call</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">zonitell.call</field>
-        <field name="view_mode">tree,form</field>
-        <field name="domain">[]</field>
-        <field name="context">{}</field>
-        <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
-                <field name="direction"/>
-                <field name="status"/>
-                <field name="extension"/>
-                <field name="caller_id_name"/>
-                <field name="caller_destination_number"/>
-                <field name="call_date"/>
-                <field name="start_stamp"/>
-                <field name="end_stamp"/>
-                <field name="duration_seconds"/>
-                <field name="duration_minutes"/>
-                <field name="missed_call"/>
-                <field name="hangup"/>
-            </p>
-        </field>
-    </record>
 
 </odoo>

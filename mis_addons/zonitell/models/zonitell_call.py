@@ -7,6 +7,7 @@ class ZonitellCall(models.Model):
     _name = "zonitell.call"
     _description = "Zonitell call"
 
+    name = fields.Char(string='name')
     date = fields.Date()
     company_name = fields.Char(string="Company name")
     direction = fields.Char(string="Direction")
@@ -27,7 +28,7 @@ class ZonitellCall(models.Model):
     hangup = fields.Char(string="Hangup")
     cause = fields.Char(string="Cause")
 
-    #contact_ids= fields.One2many(comodel_name='zonitell.call.contact', )
+    contact_ids= fields.One2many(comodel_name='zonitell.call.contact', inverse_name='contact_id' )
     
 
     def _get_duration_minutes(self):
