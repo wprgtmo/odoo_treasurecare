@@ -27,7 +27,7 @@ class ZonitellCalls(models.Model):
     hangup = fields.Char(string="Hangup")
     cause = fields.Char(string="Cause")
     caller = fields.Many2one(comodel_name="zonitell.callers")
-    contact = fields.Many2one(comodel_name="res.partner")
+    contact_caller = fields.Many2one(comodel_name="res.partner")
 
     def _get_duration_minutes(self):
         for duration in self:
