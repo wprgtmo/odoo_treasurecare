@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import zonitell_calls
-from . import zonitell_callers
-from . import zonitell_contacts
+from . import zonitell_call
+from . import zonitell_contact
+from . import zonitell_call_contact

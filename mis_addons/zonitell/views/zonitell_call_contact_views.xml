@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View zonitell.call.contact View Tree -->
+    <record id="view_zonitell_call_contact_tree" model="ir.ui.view">
+        <field name="name">view.zonitell.call.contact.tree</field>
+        <field name="model">zonitell.call.contact</field>
+        <field name="arch" type="xml">
+            <tree string="Zonitell Call Contact">
+                <field name="call_id"/>
+                <field name="contact_id"/>
+                <field name="direction"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View zonitell.call.contact form -->
+    <record id="view_zonitell_call_contact_form" model="ir.ui.view">
+        <field name="name">view.zonitell.call.contact.form</field>
+        <field name="model">zonitell.call.contact</field>
+        <field name="arch" type="xml">
+            <form string="Zonitell Call Contact">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="call_id"/>
+                            <field name="contact_id"/>
+                            <field name="direction"/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View zonitell.call.contact search -->
+    <record id="view_zonitell_call_contact_search" model="ir.ui.view">
+        <field name="name">view.zonitell.call.contact.search</field>
+        <field name="model">zonitell.call.contact</field>
+        <field name="arch" type="xml">
+            <search string="Zonitell Call Contact">
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action zonitell.call.contact -->
+    <record id="zonitell.action_contact_call_window" model="ir.actions.act_window">
+        <field name="name">Relacion llamadas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">zonitell.call.contact</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+        </field>
+    </record>
+
+</odoo>

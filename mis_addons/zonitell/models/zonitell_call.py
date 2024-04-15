@@ -3,9 +3,9 @@
 from odoo import models, fields, api
 
 
-class ZonitellCalls(models.Model):
-    _name = "zonitell.calls"
-    _description = "Zonitell calls"
+class ZonitellCall(models.Model):
+    _name = "zonitell.call"
+    _description = "Zonitell call"
 
     date = fields.Date()
     company_name = fields.Char(string="Company name")
@@ -26,8 +26,9 @@ class ZonitellCalls(models.Model):
     missed_call = fields.Char(string="Missed call")
     hangup = fields.Char(string="Hangup")
     cause = fields.Char(string="Cause")
-    caller = fields.Many2one(comodel_name="zonitell.callers")
-    contact_caller = fields.Many2one(comodel_name="res.partner")
+
+    #contact_ids= fields.One2many(comodel_name='zonitell.call.contact', )
+    
 
     def _get_duration_minutes(self):
         for duration in self:
