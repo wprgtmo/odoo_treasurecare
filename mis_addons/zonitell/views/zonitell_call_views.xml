@@ -31,7 +31,9 @@
                 <field name="duration_seconds"/>
                 <field name="duration_minutes"/>
                 <field name="missed_call"/>
-                <field name="hangup"/>
+                <field name="hangup_cause"/>
+                <field name="notes"/>
+                <field name="rating"/>
             </tree>
         </field>
     </record>
@@ -55,7 +57,8 @@
                     <field name="duration_seconds"/>
                     <field name="duration_minutes"/>
                     <field name="missed_call"/>
-                    <field name="hangup"/>
+                    <field name="hangup_cause"/>
+                    <field name="rating"/>
                 </group>
             </form>
         </field>

@@ -5,11 +5,11 @@ class ZonitellCallContact(models.Model):
     _name = 'zonitell.call.contact'
     _description = 'zonitell.call.contact'
 
-    call_id = fields.Many2one(string='zonitell.call', comodel_name='zonitell.call')
+    call_id = fields.Many2one(comodel_name='zonitell.call')
 
-    contact_id = fields.Many2one(string='zonitell.contact', comodel_name='zonitell.contact')
+    contact_id = fields.Many2one(comodel_name='res.partner')
     
-    direction = fields.Selection({'in':'In', 'out':'Out'})
+    direction = fields.Char()
 
 
 

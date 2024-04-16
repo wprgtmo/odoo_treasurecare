@@ -16,19 +16,18 @@ class ZonitellCall(models.Model):
     caller_id_name = fields.Char(string="Caller Id name")
     caller_id_number = fields.Char(string="Caller Id number")
     caller_destination = fields.Char(string="Caller destination")
-    caller_destination_number = fields.Char(
-        string="Caller destination number"
-    )
+    caller_destination_number = fields.Char(string="Caller destination number")
     call_date = fields.Char(string="Call date")
     start_stamp = fields.Char(string="Start stamp")
     end_stamp = fields.Char(string="End stamp")
     duration_seconds = fields.Char(string="Duration (seconds)")
     duration_minutes = fields.Integer(string="Duration (minutes)", compute="_get_duration_minutes")
     missed_call = fields.Char(string="Missed call")
-    hangup = fields.Char(string="Hangup")
-    cause = fields.Char(string="Cause")
+    hangup_cause = fields.Char(string="Hangup")
+    notes = fields.Char(string="Cause")
+    rating = fields.Char(string="Cause")
 
-    contact_ids= fields.One2many(comodel_name='zonitell.call.contact', inverse_name='contact_id' )
+    contact_ids= fields.One2many(comodel_name='zonitell.call.contact', inverse_name='call_id' )
     
 
     def _get_duration_minutes(self):
