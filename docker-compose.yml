@@ -39,6 +39,8 @@ services:
       - 8080:80
     depends_on:
       - db
+    volumes:
+      - ./pg-web:/var/lib/pgadmin
 
 volumes:
   odoo-web-data:
