@@ -1,4 +1,4 @@
-version: '3.8'
+#version: '3.8'
 services:
   web:
     container_name: odoo_container
@@ -29,18 +29,18 @@ services:
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - odoo-db-data:/var/lib/postgresql/data/pgdata
-  pgadmin:
-    container_name: pgadmin_container
-    image: dpage/pgadmin4
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=wprgtmo@gmail.com
-      - PGADMIN_DEFAULT_PASSWORD=5FTuX3a18
-    ports:
-      - 8080:80
-    depends_on:
-      - db
-    volumes:
-      - ./pg-web:/var/lib/pgadmin
+  # pgadmin:
+  #   container_name: pgadmin_container
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=wprgtmo@gmail.com
+  #     - PGADMIN_DEFAULT_PASSWORD=5FTuX3a18
+  #   ports:
+  #     - 8080:80
+  #   depends_on:
+  #     - db
+  #   volumes:
+  #     - ./pg-web:/var/lib/pgadmin
 
 volumes:
   odoo-web-data:
