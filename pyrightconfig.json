@@ -1,8 +1,53 @@
 {
-    "stubPath": "D:/dev/odoo_stubs17" ,
-    "extraPaths": [
-        "D:/dev/odoo17_src",
-        "D:/dev/odoo17_src/addons",
-        "D:/dev/treasurecare/mis_addons",
+    "include": [
+      "addons", 
+      "addons/hc",	
+      "odoo17",
+    ],
+  
+    "exclude": [
+      "**/node_modules",
+      "**/__pycache__",
+      "src/experimental",
+      "src/typestubs"
+    ],
+  
+    "ignore": [
+      "src/oldstuff"
+    ],
+  
+    "defineConstant": {
+      "DEBUG": true
+    },
+  
+    "stubPath": "src/stubs",
+  
+    "reportMissingImports": "error",
+    "reportMissingTypeStubs": false,
+  
+    "pythonVersion": "3.12",
+    "pythonPlatform": "Linux",
+  
+    "executionEnvironments": [
+      {
+        "root": "src/web",
+        "pythonVersion": "3.12",
+        "pythonPlatform": "Windows",
+        "extraPaths": [
+          "src/service_libs"
+        ],
+        "reportMissingImports": "warning"
+      },
+      {
+        "root": "src/sdk",
+        "pythonVersion": "3.0",
+        "extraPaths": [
+          "src/backend"
+        ]
+      },      
+      {
+        "root": "addons",
+      }
     ]
-}
+  }
+
